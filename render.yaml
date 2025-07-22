@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: password-manager
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    autoDeploy: true
