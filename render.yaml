@@ -1,7 +1,13 @@
+# services:
+#   - type: web
+#     name: password-manager
+#     env: python
+#     buildCommand: ""
+#     startCommand: gunicorn app:app
+#     autoDeploy: true
 services:
   - type: web
     name: password-manager
     env: python
-    buildCommand: ""
-    startCommand: gunicorn app:app
-    autoDeploy: true
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app"
